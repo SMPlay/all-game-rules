@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,11 +18,17 @@ const StyledMenuIcon = styled(MenuIcon)`
   color: ${({ theme: { color } }) => color.grey};
 `;
 
+const StyledLogo = styled(Logo)`
+  cursor: pointer;
+`;
+
 export const Header: FC = () => (
   <Box sx={{ flexGrow: 1 }}>
     <StyledAppBar position="static">
       <StyledToolbar>
-        <Logo />
+        <Link href="/" passHref>
+          <StyledLogo />
+        </Link>
         <IconButton size="large" edge="end" aria-label="menu">
           <StyledMenuIcon />
         </IconButton>
