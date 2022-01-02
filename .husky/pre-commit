@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
+# Check ESLint and format by Prettier 
+npm run lint-and-format
+
+# Add formatted code to a commit
+git add -A .
