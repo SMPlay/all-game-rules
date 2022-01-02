@@ -9,15 +9,23 @@ const StyledToolbar = styled(Toolbar)`
   justify-content: space-between;
 `;
 
+const StyledAppBar = styled(AppBar)`
+  background-color: ${({ theme: { color } }) => color.primary};
+`;
+
+const StyledMenuIcon = styled(MenuIcon)`
+  color: ${({ theme: { color } }) => color.grey};
+`;
+
 export const Header: FC = () => (
   <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <StyledAppBar position="static">
       <StyledToolbar>
         <Logo />
-        <IconButton size="large" edge="end" color="inherit" aria-label="menu">
-          <MenuIcon />
+        <IconButton size="large" edge="end" aria-label="menu">
+          <StyledMenuIcon />
         </IconButton>
       </StyledToolbar>
-    </AppBar>
+    </StyledAppBar>
   </Box>
 );
