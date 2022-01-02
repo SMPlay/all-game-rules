@@ -1,0 +1,10 @@
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": true,
+  "importOrder": ["^[./]", "^@mui/(.*)$", "^styles/(.*)$", "^components/(.*)$", "^layouts/(.*)$"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

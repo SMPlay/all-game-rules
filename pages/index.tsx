@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
+import styled from 'styled-components';
 
-import { StandardLayout } from "layouts/StandardLayout";
+import { StandardLayout } from 'layouts/StandardLayout';
 
 const Title = styled.h1`
   color: red;

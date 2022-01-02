@@ -1,7 +1,8 @@
-import { FC } from "react";
-import { Container } from "@mui/material";
+import { FC } from 'react';
 
-import { Header } from "components/Header";
+import { Header } from 'components/Header';
+
+import { Container } from '@mui/material';
 
 export const StandardLayout: FC = ({ children }) => (
   <>

@@ -1,10 +1,11 @@
-import { FC } from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import Link from 'next/link';
+import { FC } from 'react';
+import styled from 'styled-components';
 
-import { Logo } from "components/Logo";
+import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
+
+import { Logo } from 'components/Logo';
 
 const StyledToolbar = styled(Toolbar)`
   justify-content: space-between;
