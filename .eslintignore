@@ -3,5 +3,7 @@ build
 coverage
 .next
 next-env.d.ts
+styled.d.ts
+tsconfig.tsbuildinfo
 package-lock.json
 public
