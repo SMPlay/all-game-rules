@@ -1,8 +1,34 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Check ESLint and format by Prettier 
-npm run lint-and-format
+echo 'Checking code style...'
 
-# Add formatted code to a commit
-git add -A .
+# Check ESLint 
+echo 'ESLint checking...'
+
+npm run lint || 
+(
+  echo 'Your code has some lint errors. Use `lint-and-format` to fix that and try again';
+  false;
+)
+
+# Check prettier
+echo 'Prettier checking...'
+
+npm run prettier:check ||
+(
+  echo 'Your code has some prettier errors. Use `lint-and-format` to fix that and try again';
+  false;
+)
+
+# Check types
+echo 'Types checking...'
+
+npm run check-types ||
+(
+  echo 'Your code has some types errors. Fix them and try to commit again';
+  false;
+)
+
+# If everuthing passes
+echo 'This is a great commit!!!'
